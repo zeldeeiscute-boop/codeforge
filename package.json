@@ -1,7 +1,7 @@
 {
   "name": "codeforge",
   "productName": "CodeForge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CodeForge code editor",
   "author": "CodeForge",
   "main": "main.js",
@@ -11,7 +11,7 @@
     "appId": "com.codeforge.app",
     "files": ["main.js", "preload.js", "index.html"],
     "artifactName": "CodeForge-${version}-${os}-${arch}.${ext}",
-    "publish": [{ "provider": "github" }],
+    "publish": [{ "provider": "github", "releaseType": "release" }],
     "mac": { "category": "public.app-category.developer-tools", "identity": null, "target": [{ "target": "dmg", "arch": ["x64", "arm64"] }] },
     "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
     "linux": { "category": "Development", "target": [{ "target": "AppImage", "arch": ["x64"] }] }
