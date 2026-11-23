@@ -1,0 +1,19 @@
+{
+  "name": "codeforge",
+  "productName": "CodeForge",
+  "version": "1.0.0",
+  "description": "CodeForge code editor",
+  "author": "CodeForge",
+  "main": "main.js",
+  "scripts": { "start": "electron ." },
+  "devDependencies": { "electron": "^33.0.0", "electron-builder": "^25.1.8" },
+  "build": {
+    "appId": "com.codeforge.app",
+    "files": ["main.js", "preload.js", "index.html"],
+    "artifactName": "CodeForge-${version}-${os}-${arch}.${ext}",
+    "publish": [{ "provider": "github" }],
+    "mac": { "category": "public.app-category.developer-tools", "identity": null, "target": [{ "target": "dmg", "arch": ["x64", "arm64"] }] },
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "linux": { "category": "Development", "target": [{ "target": "AppImage", "arch": ["x64"] }] }
+  }
+}
